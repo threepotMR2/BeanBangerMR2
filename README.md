@@ -11,6 +11,7 @@ https://www.youtube.com/watch?v=NijV0-c2hg0
 You will see it completed here:-
 https://www.youtube.com/shorts/5FSTMIWvpoY
 
+There is a very messy spreadsheet that "helps" to make the formula for to convert the analogue input voltage to the BEAN temp hex value.
 
 Enjoy! 
 
