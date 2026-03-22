@@ -30,3 +30,13 @@ There is a very messy spreadsheet that "helps" to make the formula for to conver
 Enjoy! 
 
 ThreepotMR2
+
+Components list:-
+
+3 x 10k resistors
+5 x 1k resistors
+2 x 330 ohm resistors
+4 x 2n3904 transistors
+2 x PC817 optocouplers
+1 x arduino nano
+Some 2.54mm pitch PCB Mount Screw Terminal blocks ... or just solder your wires direct to the PCB
