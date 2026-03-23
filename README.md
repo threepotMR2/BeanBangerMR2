@@ -53,7 +53,7 @@ Inside the cluster the MPX1 and MPX2 wires are both joined together, so you can 
 
 This diagram shows you what each wire to use from the MR2 engine ecu connector.
 
-
+<img src=https://github.com/threepotMR2/BeanBangerMR2/blob/master/ecu%20connector.png>
 
 BUT it you need to wire the temp sensor to your current ECU, which has a pullup resistor in it and thus the beanbanger works if you pull a spur from your temp sensor. e.g. your temp sensor will be feeding both the beanbanger and your engine ecu. The temp gauge calibration supplied in the arduino code is for Ecumaster Emu Black which has a 2.2k pull up resistor.
 
