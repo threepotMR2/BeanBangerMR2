@@ -66,8 +66,11 @@ How To Calibrate te temp gauge algo for different sensor and ecu combinations
 In the "BeanBanger_works.ino" file this is this bit of code on lines 42 to 45
 
 //Does the temp gauge Algo is 75000/(ADC+300)).... ADC 0-1023 is 0-5v
+
 //Engine Temp Gauge moves 90-255 but normal range deadzone 165-212
+
       t = analogRead(A7);  //read temp sensor voltage on analogue pin 2
+      
       t = 75000/(t+300);
 
 We are reading the analog value from the ADC Value from arduino input pin "A7", then we do a bit of maths on it:-
