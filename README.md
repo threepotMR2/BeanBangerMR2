@@ -40,3 +40,24 @@ Components list:-
 2 x PC817 optocouplers
 1 x arduino nano
 Some 2.54mm pitch PCB Mount Screw Terminal blocks ... or just solder your wires direct to the PCB
+
+
+
+
+How To wire it in
+=================
+
+Inside the cluster the MPX1 and MPX2 wires are both joined together, so you can use either or both! The do the same thing.
+
+<img src=https://github.com/threepotMR2/BeanBangerMR2/blob/master/howtowirebeanMPXcluster.png>
+
+This diagram shows you what each wire to use from the MR2 engine ecu connector.
+
+
+
+BUT it you need to wire the temp sensor to your current ECU, which has a pullup resistor in it and thus the beanbanger works if you pull a spur from your temp sensor. e.g. your temp sensor will be feeding both the beanbanger and your engine ecu. The temp gauge calibration supplied in the arduino code is for Ecumaster Emu Black which has a 2.2k pull up resistor.
+
+
+
+
+
