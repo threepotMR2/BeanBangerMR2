@@ -59,5 +59,28 @@ BUT it you need to wire the temp sensor to your current ECU, which has a pullup 
 
 
 
+How To Calibrate te temp gauge algo for different sensor and ecu combinations
+=============================================================================
+
+
+In the "BeanBanger_works.ino" file this is this bit of code on lines 42 to 45
+
+//Does the temp gauge Algo is 75000/(ADC+300)).... ADC 0-1023 is 0-5v
+//Engine Temp Gauge moves 90-255 but normal range deadzone 165-212
+      t = analogRead(A7);  //read temp sensor voltage on analogue pin 2
+      t = 75000/(t+300);
+
+We are reading the analog value from the ADC Value from arduino input pin "A7", then we do a bit of maths on it:-
+
+75000 / ( ADC value + 300) = bean temp value
+
+You can play with this mnaths to create a value which ranges from 90 to 255 which is the gauge needle possition. Its weird though, 90 to 165 is cold to upto the middle of the gauge, then there is a deadzone from 165 to 212 which is normal temperature, then if you go about this the needle shoots up quickly.
+
+So roughly Degrees C x 2 = Bean value ......... e.g. 90c x 2 = 180 = which is in the dead zone being normal.
+
+Thus the deadzone starts at 82.5c and goes upto 106c which is pretty reasonable. Anything above this makes the gauge shoot up, e.g 107c = 214 bean
+
+There is a spreadsheet here called temp gauge algo.ods https://github.com/threepotMR2/BeanBangerMR2/blob/master/temp%20gauge%20algo.ods which is an utter mess but if you play with it you will see it draws you some graphs and will let you experiement with your algo, it is truly an utter mess though.
+
 
 
