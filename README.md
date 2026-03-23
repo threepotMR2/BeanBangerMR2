@@ -74,13 +74,15 @@ We are reading the analog value from the ADC Value from arduino input pin "A7", 
 
 75000 / ( ADC value + 300) = bean temp value
 
-You can play with this mnaths to create a value which ranges from 90 to 255 which is the gauge needle possition. Its weird though, 90 to 165 is cold to upto the middle of the gauge, then there is a deadzone from 165 to 212 which is normal temperature, then if you go about this the needle shoots up quickly.
+You can play with this maths to create a value which ranges from 90 to 255 which is the gauge needle possition.
 
-So roughly Degrees C x 2 = Bean value ......... e.g. 90c x 2 = 180 = which is in the dead zone being normal.
+So roughly Degrees C x 2 = Bean value ......... e.g. 90c x 2 = 180 = which is in the "dead zone" being normal.
 
-Thus the deadzone starts at 82.5c and goes upto 106c which is pretty reasonable. Anything above this makes the gauge shoot up, e.g 107c = 214 bean
+Its weird though, the first value that makes it move is 45c (90 bean) then upto 165 bean (82c) upto the middle of the gauge, then there is a deadzone from 165 to 212 which is normal temperature, then if you go about this the needle shoots up quickly. Its not a direct gauge, its more of an needle based normal/overheating dash indicator.
 
-There is a spreadsheet here called temp gauge algo.ods https://github.com/threepotMR2/BeanBangerMR2/blob/master/temp%20gauge%20algo.ods which is an utter mess but if you play with it you will see it draws you some graphs and will let you experiement with your algo, it is truly an utter mess though.
+The deadzone starts at 82.5c (165 bean) and goes upto 106c (212 bean) which is pretty reasonable. Anything above this makes the gauge shoot up, e.g 107c = 214 bean
+
+There is a spreadsheet here called temp gauge algo.ods https://github.com/threepotMR2/BeanBangerMR2/blob/master/temp%20gauge%20algo.ods which is an absolute utter mess but if you play with it you will see it draws you some graphs and will let you experiement with your algo, it is truly an utter mess though.
 
 
 
